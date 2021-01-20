@@ -2,8 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivendo em um Pais</title>
+     <title>Vivendo em um Pais</title>
 </head>
 <body>
     <h1>Pais em que está vivendo</h1>
@@ -15,15 +14,13 @@
          function verificar(){
          var txtp = document.getElementById('txtPais')
          var res = document.querySelector('div#res')
-            if(txtp != "Brasil") {
+         var brasil = "Brasil"
+            if(txtp == brasil) {
                 res.innerHTML = "Você é estrangeiro"
             }
-            else {
-                res.innerHTML = "Você é Brasileiro"
-            }                
+           res.innerHTML = "Você é estrangeiro!"               
             
-         }
-         
+         }  
      </script>
     
 </body>
