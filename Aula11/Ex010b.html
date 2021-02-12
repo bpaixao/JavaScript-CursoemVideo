@@ -6,29 +6,24 @@
     <title>Detran</title>
     </head>
 <body>
-    <h1>Sistema de Multas</h1>
-     Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h 
-     
-    <!-- <input type="button" value="Verificar" onclick="calcular()"> -->
-
-    <input type="button" value="Verificar">
-     <div id="res"></div>
+    <h1>Sistema de Nacionalidade</h1>
+     Qual o pais em que vive? 
+     <input type="text" name="txtpais" id="txtpais"> 
+     <input type="button" value="Verificar" onclick="verificar()">
+     <div id="resultado"></div>
 
      <script>
         /**/
-        var res = window.document.querySelector('div#res')
-        // o avento acontece ao clicar, porem sem precisar colocar no html
-        res.addEventListener('click', calcular)
-        
-         function calcular(){
-            var txtv = window.document.querySelector('input#txtvel')
-
-             var vel = Number(txtv.value)
-             res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong>Km/h</p>`
-             if(vel > 60) {
-                 res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>`
+         function verificar(){
+             var txPais = window.document.querySelector('input#txtpais')
+             var result = window.document.querySelector('div#resultado')
+                        
+             if(txPais.value == "Brasil") {
+                result.innerHTML = `<p>Você é <strong>Brasileiro</strong></p>`
+             } else {
+                result.innerHTML = `<p>Você é <strong>Estrangeiro</strong></p>`
              }
-             res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+             
          }
      </script>
     
