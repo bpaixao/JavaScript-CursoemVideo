@@ -1,4 +1,6 @@
+// Consegue verificar a data do sistema
 var agora = new Date();
+//recupera dessa data a apenas o dia da semana
 var diaSem = agora.getDay();
 
 //Melhor usado em expressão, pois se precisar testar algo seria preferivel o IF

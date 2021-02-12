@@ -1,5 +1,7 @@
+// Consegue verificar a data do sistema
 var agora = new Date();
-var hora = agora.getHours()
+//recupera dessa data a apenas a hora
+var diaSem = agora.getHours();
 
 console.log(`Agora são exatamente ${hora}`)
 if (hora > 5 && hora < 12){
