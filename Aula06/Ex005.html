@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passos com DOM</title>
     <style>
-        body{
-            background-color: rgb(68,125,199);
+        body {
+            background-color: rgb(68, 125, 199);
             color: white;
             font: normal 18pt Arial;
         }
     </style>
 </head>
+
 <body>
-      
+
     <h1>Iniciando estudos com DOM </h1>
     <P>Aqui vai o resultado</P>
-    <p>Aprendendo a usar o <strong>DOM </strong> em JavaScript</p>
-    <div id="msg" >Clique me mim</div>
+    <p>Aprendendo a usar o <strong> DOM </strong> em JavaScript</p>
+    <div id="msg">Clique me mim</div>
     <script>
         //pegando o elemento pela tag na 1º posição, ou seja o primeiro paragrafo.
         var p1 = document.getElementsByTagName('p')[1]
-        //escrevendo o paragrafo novamente pelo JS. só o texto
-        //document.write('Está escrito: ' + p1.innerText)
+            //escrevendo o paragrafo novamente pelo JS. só o texto
+            //document.write('Está escrito: ' + p1.innerText)
 
         //escrevendo o paragrafo novamente pelo JS. porem com a formatação
         //document.write('Está escrito: ' + p1.innerHTML)
 
         //window.document.write(window.document.URL)
 
-       /* var d = document.getElementsByName('msg')[0]
-        d.innerText = 'Olá'*/
+        /* var d = document.getElementsByName('msg')[0]
+         d.innerText = 'Olá'*/
 
         //quando identificado como ID usa-se a cerquilha, quando foi class usa-se . no paranmetro
         var d = document.querySelector('div#msg')
         d.style.background = 'Blue'
-
-
     </script>
 
 </body>
+
 </html>
