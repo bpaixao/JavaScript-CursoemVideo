@@ -3,7 +3,7 @@ function geradorTabuada() {
     var num = document.getElementById('numero')
     var tab = document.getElementById('selTab')
 
-    //Ferifica se tem numero
+    //Verifica se tem numero
     if(num.value.length == 0) {
         alert("Por favor digite um numero!")
     } else {
