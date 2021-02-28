@@ -6,7 +6,6 @@ function adicionandoNum() {
     //Verifica se tem numero
     if(num.value.length == 0 || num.value.length > 100) {
         alert("Por favor digite um numero valido!")
-    
     }
 
 }
