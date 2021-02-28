@@ -31,3 +31,16 @@ for(var i =0; i < num.length; i++) {
 for( let i in num){
     console.log(`A posição ${i} no vetor, tem o valor: ${num[i]}`)
 }
+
+//buscar valores no vetor - usa-se o indexOf(valor)
+//let localiza = num.indexOf(8)
+
+// numero que não exite no array
+localiza = num.indexOf(1)
+
+
+if (localiza == -1) {
+    console.log(`\nO valor não foi encontrado`)
+} else {
+    console.log(`\nO valor está na posição ${localiza}`)
+}
