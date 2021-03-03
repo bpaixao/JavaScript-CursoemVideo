@@ -1,6 +1,6 @@
 //Pegando os elementos do HTML e associando ao JS
 var num = document.getElementById('numero')
-var tabela = document.getElementById('tabela')
+let lista = document.querySelector('select#fLista')
 var res = document.getElementById('res')
 let valores = []
 
@@ -12,7 +12,7 @@ function isNumero(n){
     }
 }
 
-function inTabela(n, l){
+function inLista(n, l){
     if(l.indexOf(Number(n)) != -1){
         return true
     }else{
@@ -21,13 +21,16 @@ function inTabela(n, l){
 
 }
 
-
 function adicionandoNum() {
-    if (isNumero(num.value) && !inTabela(num.value))  {
-        
-
+    if (isNumero(num.value) && !inLista(num.value, valores))  {
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Valor ${num.value} adicionado!`
+        lista.appendChild(item)
     }  else {
         alert("Valor invalido ou já encontrado na lista")
     }
 
+    num.value = ""
+    num.focus()
 }
