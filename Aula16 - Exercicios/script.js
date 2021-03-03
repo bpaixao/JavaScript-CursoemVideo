@@ -1,31 +1,33 @@
+//Pegando os elementos do HTML e associando ao JS
+var num = document.getElementById('numero')
+var tabela = document.getElementById('tabela')
+var res = document.getElementById('res')
+let valores = []
+
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    }else{
+        return false
+    }
+}
+
+function inTabela(n, l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        false
+    }
+
+}
+
+
 function adicionandoNum() {
-    //Pegando os elementos do HTML e associando ao JS
-    var num = document.getElementById('numero')
-    var tab = document.getElementById('selTab')
-
-    //Verifica se tem numero
-    if(num.value == 0 || num.value > 100) {
-        alert("Por favor digite um numero válido!")
-    } else {
-        var n = Number(num.value)
-        var vetor = []
-        var c = 1;
-       
-        //contador comeca em 1 e vai até 10
-        while (c <= 1) {
-            
-            vetor.push(n)
-            let item = document.createElement('option')
-            item.text = `Valor ${n} adicionado`
-            item.value = `tab ${c}`
-            //adicionando no html
-            tab.appendChild(item)
-            c++
-        }
-
-       console.log(vetor)
+    if (isNumero(num.value) && !inTabela(num.value))  {
         
-        
+
+    }  else {
+        alert("Valor invalido ou já encontrado na lista")
     }
 
 }
